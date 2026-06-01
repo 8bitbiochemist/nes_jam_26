@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(135, 136)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=216121179]
+[sub_resource type="LabelSettings" id="LabelSettings_cvnsp"]
+
+[node name="Player" type="CharacterBody2D" unique_id=216121179]
 motion_mode = 1
 script = ExtResource("2_cvnsp")
 SPEED = 200.0
@@ -17,3 +19,22 @@ shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=95169920]
 texture = ExtResource("1_v0iea")
+
+[node name="Testing Buttons" type="Label" parent="." unique_id=8246682]
+offset_left = 64.0
+offset_top = -65.0
+offset_right = 137.0
+offset_bottom = -42.0
+text = "[Nothing]"
+label_settings = SubResource("LabelSettings_cvnsp")
+
+[node name="Timer" type="Timer" parent="." unique_id=1069471341]
+wait_time = 0.055
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1485849886]
+offset_left = -113.0
+offset_top = -117.0
+offset_right = 203.0
+offset_bottom = -80.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

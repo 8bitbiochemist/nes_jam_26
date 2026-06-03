@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://v4tnt5j16d31"]
+
+[ext_resource type="Script" uid="uid://b2fhs8goinu3j" path="res://Scripts/enemyAI.gd" id="1_wovta"]
+[ext_resource type="Texture2D" uid="uid://ckhec6vpx170q" path="res://Assets/witch.png" id="2_xeo28"]
+[ext_resource type="Script" uid="uid://c336cpsmaq4df" path="res://Scenes/state_machine.gd" id="3_xeo28"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpr8r"]
+radius = 9.0
+height = 40.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1154319119]
+script = ExtResource("1_wovta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1691745202]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_kpr8r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1621646719]
+texture = ExtResource("2_xeo28")
+
+[node name="State Machine" type="Node" parent="." unique_id=718496581]
+script = ExtResource("3_xeo28")

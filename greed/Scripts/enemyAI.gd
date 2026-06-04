@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var direction = 1
 var start_position = 0 
-var walking_distance = 50
+var walking_distance = 20
 var speed = 20
 
 

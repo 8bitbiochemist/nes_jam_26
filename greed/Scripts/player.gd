@@ -5,7 +5,7 @@ extends CharacterBody2D
 #This is the players maximum health
 @export var maxHealth = 30
 #current health variable used to update health of player
-@onready var currentHealth: int = maxHealth #
+@onready var currentHealth: int = maxHealth 
 
 #This function runs whatever is in it when the game starts 
 #It currently activates the timer node which helps with the 

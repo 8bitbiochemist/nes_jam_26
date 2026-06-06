@@ -9,7 +9,9 @@ height = 42.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_cvnsp"]
 
-[node name="Player" type="CharacterBody2D" unique_id=216121179]
+[node name="Player" type="CharacterBody2D" unique_id=216121179 groups=["Player"]]
+collision_layer = 2
+collision_mask = 0
 motion_mode = 1
 script = ExtResource("2_cvnsp")
 SPEED = 200.0

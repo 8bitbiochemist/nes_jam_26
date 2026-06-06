@@ -27,3 +27,8 @@ func Update(delta: float):
 func Physics_update(_delta: float):
 	if enemy:
 		enemy.velocity = move_direction * move_speed
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("GET THAT BASTARD!!!!")
+	Transitioned.emit(self,"detected")

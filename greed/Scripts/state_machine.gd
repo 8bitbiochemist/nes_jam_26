@@ -9,15 +9,20 @@ func _ready():
 		if child is State:
 			states[child.name.to_lower()] = child 
 			child.Transitioned.connect(on_child_transition)
+			
+	if initial_state:
+		initial_state.Enter()
+		current_state = initial_state
+		
 
-func _process(delta):
+func _process(_delta):
 	if current_state:
-		current_state.Update(delta)
+		current_state.Update(_delta)
 	
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if current_state:
-		current_state.Physics_update(delta)
+		current_state.Physics_update(_delta)
 		
 		
 func on_child_transition(state, new_state_name):
@@ -27,9 +32,9 @@ func on_child_transition(state, new_state_name):
 	var new_state = states.get(new_state_name.to_lower())
 
 	if current_state:
-		current_state.exit()
+		current_state.Exit()
 		
-	new_state.enter()
+	new_state.Enter()
 	
 	current_state = new_state
 		

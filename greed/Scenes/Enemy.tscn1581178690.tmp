@@ -15,7 +15,7 @@ size = Vector2(13.94261, 75.007385)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1154319119]
 collision_layer = 4
-collision_mask = 0
+collision_mask = 2
 script = ExtResource("1_wovta")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1691745202]
@@ -40,8 +40,6 @@ enemy = NodePath("../..")
 metadata/_custom_type_script = "uid://di3w77fr0jjia"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=990959620]
-collision_layer = 0
-collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1154415851]

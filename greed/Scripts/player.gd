@@ -5,7 +5,7 @@ extends CharacterBody2D
 #This is the players maximum health
 @export var maxHealth = 30
 #current health variable used to update health of player
-@onready var currentHealth: int = maxHealth 
+@export var currentHealth: int = maxHealth 
 
 #This function runs whatever is in it when the game starts 
 #It currently activates the timer node which helps with the 
@@ -13,6 +13,7 @@ extends CharacterBody2D
 func _ready() -> void:
 	$Timer.wait_time = 2
 	$Timer.start()
+	
 	
 func _physics_process(_delta: float) -> void:
 #Movement
@@ -39,6 +40,11 @@ func life_drain(amt):
 	currentHealth += amt
 	currentHealth = clamp(currentHealth,0,maxHealth)
 	
+func heal():
+	currentHealth += HealthManager.increase_health(health_amount)
+	
+
+
 
 #This is hear to actually make the player lose health
 #over time. 

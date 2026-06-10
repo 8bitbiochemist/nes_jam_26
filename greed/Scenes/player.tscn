@@ -9,9 +9,12 @@ height = 42.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_cvnsp"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+height = 38.0
+
 [node name="Player" type="CharacterBody2D" unique_id=216121179 groups=["Player"]]
 collision_layer = 2
-collision_mask = 0
+collision_mask = 8
 motion_mode = 1
 script = ExtResource("2_cvnsp")
 SPEED = 200.0
@@ -40,5 +43,13 @@ offset_left = -113.0
 offset_top = -117.0
 offset_right = 203.0
 offset_bottom = -80.0
+
+[node name="player hurtbox" type="Area2D" parent="." unique_id=16256416]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player hurtbox" unique_id=188891262]
+shape = SubResource("CapsuleShape2D_cvnsp")
+debug_color = Color(0.8938383, 0.30513504, 0.26940864, 0.41960785)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

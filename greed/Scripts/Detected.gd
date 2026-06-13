@@ -7,7 +7,7 @@ var player: CharacterBody2D
 
 
 func Enter():
-	player = get_tree().get_first_node_in_group("player")
+	player = get_tree().get_first_node_in_group("Player")
 	
 
 func Physics_Update(_delta: float):

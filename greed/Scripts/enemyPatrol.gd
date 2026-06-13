@@ -30,7 +30,10 @@ func Physics_update(_delta: float):
 	if enemy:
 		enemy.velocity = move_direction * move_speed
 
-func _on_area_2d_body_entered(_body: Node2D) -> void:
-	if (_body.name == 'player'):
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
 		print("GET THAT BASTARD!!!!")
 		Transitioned.emit(self,"detected")

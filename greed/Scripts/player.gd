@@ -2,10 +2,7 @@ extends CharacterBody2D
 
 #dictates the speed of the character
 @export var SPEED = 300.0
-#This is the players maximum health
-@export var maxHealth = 30
-#current health variable used to update health of player
-@export var currentHealth: int = maxHealth 
+
 
 #This function runs whatever is in it when the game starts 
 #It currently activates the timer node which helps with the 
@@ -35,19 +32,14 @@ func actions():
 		$"Testing Buttons". text = "nothing"
 		
 #this is the life drain function it takes an argument (amt)
-# and adds it to the currentHealth variable 
+# and adds it to the current_health variable
 func life_drain(amt):
-	currentHealth += amt
-	currentHealth = clamp(currentHealth,0,maxHealth)
+	HealthManager.current_health += amt
+	HealthManager.current_health = clamp(HealthManager.current_health,0,HealthManager.max_health)
 	
-func heal():
-	currentHealth += HealthManager.increase_health(health_amount)
-	
-
-
 
 #This is hear to actually make the player lose health
 #over time. 
 func _on_timer_timeout() -> void:
 	life_drain(-1)
-	print(currentHealth)
+	print(HealthManager.current_health)

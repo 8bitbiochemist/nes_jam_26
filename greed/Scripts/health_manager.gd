@@ -1,6 +1,6 @@
 extends Node
 
-
+var test 
 var max_health : int = 30
 var current_health : int
 

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c5hcxuh7q4s4g"]
+
+[ext_resource type="Script" uid="uid://n0ar7qs5bm18" path="res://food.gd" id="1_pohk7"]
+[ext_resource type="Texture2D" uid="uid://ci7depptcb1mm" path="res://Assets/Art/bread1.png" id="2_q6vj8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v8piq"]
+radius = 9.219544
+
+[node name="Food" type="Node2D" unique_id=781275109]
+script = ExtResource("1_pohk7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1018959217]
+texture = ExtResource("2_q6vj8")
+
+[node name="Food box" type="Area2D" parent="." unique_id=1100840544]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food box" unique_id=2136619657]
+shape = SubResource("CircleShape2D_v8piq")
+debug_color = Color(0.76724523, 0.44406474, 0.15037489, 0.41960785)
+
+[connection signal="body_entered" from="Food box" to="." method="_on_food_box_body_entered"]

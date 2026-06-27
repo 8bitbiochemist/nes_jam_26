@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cshg1873ue3md"]
+
+[ext_resource type="Texture2D" uid="uid://bm354aqrkosgo" path="res://Assets/Art/roughguy.png" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://dgmjab1xew0o5" path="res://Scripts/player.gd" id="2_cvnsp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgqql"]
+radius = 12.0
+height = 42.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_cvnsp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+height = 38.0
+
+[node name="Player" type="CharacterBody2D" unique_id=216121179 groups=["Player"]]
+collision_layer = 2
+collision_mask = 8
+motion_mode = 1
+script = ExtResource("2_cvnsp")
+SPEED = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=573429862]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_vgqql")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=95169920]
+position = Vector2(0, -1)
+texture = ExtResource("2_6t5aa")
+
+[node name="Testing Buttons" type="Label" parent="." unique_id=8246682]
+offset_left = 64.0
+offset_top = -65.0
+offset_right = 137.0
+offset_bottom = -42.0
+text = "[Nothing]"
+label_settings = SubResource("LabelSettings_cvnsp")
+
+[node name="Timer" type="Timer" parent="." unique_id=1069471341]
+wait_time = 0.055
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1485849886]
+offset_left = -113.0
+offset_top = -117.0
+offset_right = 203.0
+offset_bottom = -80.0
+
+[node name="player hurtbox" type="Area2D" parent="." unique_id=16256416]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player hurtbox" unique_id=188891262]
+shape = SubResource("CapsuleShape2D_cvnsp")
+debug_color = Color(0.8938383, 0.30513504, 0.26940864, 0.41960785)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

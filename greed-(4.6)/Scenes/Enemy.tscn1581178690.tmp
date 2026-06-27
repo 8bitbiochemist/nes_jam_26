@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://v4tnt5j16d31"]
+
+[ext_resource type="Script" uid="uid://b2fhs8goinu3j" path="res://Scripts/enemyAI.gd" id="1_wovta"]
+[ext_resource type="Texture2D" uid="uid://ckhec6vpx170q" path="res://Assets/witch.png" id="2_xeo28"]
+[ext_resource type="Script" uid="uid://c336cpsmaq4df" path="res://Scripts/state_machine.gd" id="3_xeo28"]
+[ext_resource type="Script" uid="uid://dx6x56qli5br2" path="res://Scripts/enemyPatrol.gd" id="4_kpr8r"]
+[ext_resource type="Script" uid="uid://di3w77fr0jjia" path="res://Scripts/Detected.gd" id="5_1exfc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpr8r"]
+radius = 9.0
+height = 40.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpr8r"]
+size = Vector2(13.94261, 75.007385)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1154319119]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_wovta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1691745202]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_kpr8r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1621646719]
+texture = ExtResource("2_xeo28")
+
+[node name="State Machine" type="Node" parent="." unique_id=718496581 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_xeo28")
+initial_state = NodePath("Patrol")
+
+[node name="Patrol" type="Node" parent="State Machine" unique_id=74157762 node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_kpr8r")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://dx6x56qli5br2"
+
+[node name="detected" type="Node" parent="State Machine" unique_id=2137811300 node_paths=PackedStringArray("enemy")]
+script = ExtResource("5_1exfc")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://di3w77fr0jjia"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=990959620]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1154415851]
+position = Vector2(-28.489338, -7.9156923)
+rotation = 1.5648918
+shape = SubResource("RectangleShape2D_kpr8r")
+debug_color = Color(0.8716722, 0.33910537, 0.22727641, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=847373567]
+wait_time = 3.0
+
+[connection signal="body_entered" from="Area2D" to="State Machine/Patrol" method="_on_area_2d_body_entered"]

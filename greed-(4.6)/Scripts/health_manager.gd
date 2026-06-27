@@ -1,0 +1,27 @@
+extends Node
+
+var test 
+var max_health : int = 30
+var current_health : int
+
+
+signal on_health_changed
+
+func _ready() -> void:
+	current_health = max_health
+	
+func decrease_health(_health_amount: int):
+	current_health -= _health_amount
+	
+	if current_health < 0:
+		current_health = 0
+	print("OW FUCK I'M DYING")
+	on_health_changed.emit(current_health)
+	
+func increase_health(_health_amount: int):
+	current_health += _health_amount
+	if current_health > max_health:
+		current_health = max_health
+		
+	print("Healed")
+	on_health_changed.emit(current_health)

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 #dictates the speed of the character
 @export var SPEED = 300.0
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 #This function runs whatever is in it when the game starts 
@@ -20,7 +21,7 @@ func _physics_process(_delta: float) -> void:
 		velocity.normalized()
 	move_and_slide()
 	actions()
-	
+		
 # this function is used to test that the players actions
 #will be changed when the assets are ready
 func actions():
@@ -30,6 +31,10 @@ func actions():
 		$"Testing Buttons".text="MUNCH"
 	else:
 		$"Testing Buttons". text = "nothing"
+		
+		
+
+	
 		
 #this is the life drain function it takes an argument (amt)
 # and adds it to the current_health variable

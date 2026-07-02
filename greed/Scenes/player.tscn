@@ -1,16 +1,236 @@
 [gd_scene format=3 uid="uid://cshg1873ue3md"]
 
-[ext_resource type="Texture2D" uid="uid://bm354aqrkosgo" path="res://Assets/Art/roughguy.png" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://da8aqtau1rbru" path="res://addons/knight sprite sheet.png" id="2_6t5aa"]
 [ext_resource type="Script" uid="uid://dgmjab1xew0o5" path="res://Scripts/player.gd" id="2_cvnsp"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_g4v7s"]
+states/Start/position = Vector2(172, 99.68)
+graph_offset = Vector2(42, -4)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgqql"]
 radius = 12.0
 height = 42.0
 
+[sub_resource type="Animation" id="Animation_cvnsp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player_hitbox:monitorable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6t5aa"]
+resource_name = "die"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [13, 14]
+}
+
+[sub_resource type="Animation" id="Animation_vgqql"]
+resource_name = "move_down"
+length = 0.06667000347711147
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_fkybt"]
+resource_name = "move_side"
+length = 0.1000033385489136
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_x3wgy"]
+resource_name = "move_up"
+length = 0.06667000347711147
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_3smsa"]
+resource_name = "punch_down"
+length = 0.03333666840530932
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_8erm5"]
+resource_name = "punch_side"
+length = 0.03333666840530932
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_f1ek2"]
+resource_name = "punch_up"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player_hitbox:monitorable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tx1dd"]
+resource_name = "suck_down"
+length = 0.03333666840530932
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
+[sub_resource type="Animation" id="Animation_gymyn"]
+resource_name = "suck_side"
+length = 0.03333666840530932
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_pu2lt"]
+resource_name = "suck_up"
+length = 0.03333666840530932
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KnightSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ukyrk"]
+_data = {
+&"RESET": SubResource("Animation_cvnsp"),
+&"die": SubResource("Animation_6t5aa"),
+&"move_down": SubResource("Animation_vgqql"),
+&"move_side": SubResource("Animation_fkybt"),
+&"move_up": SubResource("Animation_x3wgy"),
+&"punch_down": SubResource("Animation_3smsa"),
+&"punch_side": SubResource("Animation_8erm5"),
+&"punch_up": SubResource("Animation_f1ek2"),
+&"suck_down": SubResource("Animation_tx1dd"),
+&"suck_side": SubResource("Animation_gymyn"),
+&"suck_up": SubResource("Animation_pu2lt")
+}
+
 [sub_resource type="LabelSettings" id="LabelSettings_cvnsp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
 height = 38.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 
 [node name="Player" type="CharacterBody2D" unique_id=216121179 groups=["Player"]]
 collision_layer = 2
@@ -19,13 +239,22 @@ motion_mode = 1
 script = ExtResource("2_cvnsp")
 SPEED = 200.0
 
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=349180157]
+tree_root = SubResource("AnimationNodeStateMachine_g4v7s")
+anim_player = NodePath("../AnimationPlayer")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=573429862]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_vgqql")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=95169920]
-position = Vector2(0, -1)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1762608439]
+libraries/ = SubResource("AnimationLibrary_ukyrk")
+
+[node name="KnightSpriteSheet" type="Sprite2D" parent="." unique_id=1413005805]
+position = Vector2(0, 1)
 texture = ExtResource("2_6t5aa")
+hframes = 4
+vframes = 4
 
 [node name="Testing Buttons" type="Label" parent="." unique_id=8246682]
 offset_left = 64.0
@@ -44,12 +273,19 @@ offset_top = -117.0
 offset_right = 203.0
 offset_bottom = -80.0
 
-[node name="player hurtbox" type="Area2D" parent="." unique_id=16256416]
+[node name="player_hurtbox" type="Area2D" parent="." unique_id=16256416]
 collision_layer = 2
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player hurtbox" unique_id=188891262]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox" unique_id=188891262]
 shape = SubResource("CapsuleShape2D_cvnsp")
 debug_color = Color(0.8938383, 0.30513504, 0.26940864, 0.41960785)
+
+[node name="player_hitbox" type="Area2D" parent="." unique_id=844349375]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox" unique_id=1499982705]
+position = Vector2(-4, -28)
+shape = SubResource("CircleShape2D_g4v7s")
+debug_color = Color(0, 0.6424477, 0.32285005, 0.41960785)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -23,6 +23,8 @@ HealthManager="*uid://lcq3ymbalnxe"
 
 window/size/viewport_width=256
 window/size/viewport_height=224
+window/size/resizable=false
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
 [input]

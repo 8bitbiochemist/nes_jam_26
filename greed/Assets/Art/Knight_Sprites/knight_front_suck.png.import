@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xyjwuklq3cy6"
-path="res://.godot/imported/knightbacksuck.png-dbb1c54708982400b1e789eed65f46c1.ctex"
+uid="uid://8cl2o0c33bxm"
+path="res://.godot/imported/knight_front_suck.png-b9caf5fc06dc47551e5b36279ce5807b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knightbacksuck.png"
-dest_files=["res://.godot/imported/knightbacksuck.png-dbb1c54708982400b1e789eed65f46c1.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_front_suck.png"
+dest_files=["res://.godot/imported/knight_front_suck.png-b9caf5fc06dc47551e5b36279ce5807b.ctex"]
 
 [params]
 

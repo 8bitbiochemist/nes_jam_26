@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rjkp8clbe3vb"
-path="res://.godot/imported/knight sprite sheet.png-283c573b3fdc3a318e57ca63be7a062a.ctex"
+uid="uid://oug3x6sj56n0"
+path="res://.godot/imported/knight_punch_up.png-de189390228a1b279d41c01576877fab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knight sprite sheet.png"
-dest_files=["res://.godot/imported/knight sprite sheet.png-283c573b3fdc3a318e57ca63be7a062a.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_punch_up.png"
+dest_files=["res://.godot/imported/knight_punch_up.png-de189390228a1b279d41c01576877fab.ctex"]
 
 [params]
 

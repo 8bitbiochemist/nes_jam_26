@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ssold8muxonv"
-path="res://.godot/imported/knightwalkdown1.png-b05b4502739857fd1ff503109744b4d2.ctex"
+uid="uid://dtlpdbl7pcq5e"
+path="res://.godot/imported/knight_back_suck.png-12f140889c8318d4ba91ac293d3ebb35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knightwalkdown1.png"
-dest_files=["res://.godot/imported/knightwalkdown1.png-b05b4502739857fd1ff503109744b4d2.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_back_suck.png"
+dest_files=["res://.godot/imported/knight_back_suck.png-12f140889c8318d4ba91ac293d3ebb35.ctex"]
 
 [params]
 

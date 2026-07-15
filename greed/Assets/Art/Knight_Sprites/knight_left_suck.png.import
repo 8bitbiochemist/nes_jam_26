@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwn6wp3qy4gux"
-path="res://.godot/imported/knightkneel.png-a1e22b980bd87222e69af8f9f2e36d83.ctex"
+uid="uid://bjv2g3iqrwpp2"
+path="res://.godot/imported/knight_left_suck.png-d1154e8df3ef5f3e46222d279716b47b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knightkneel.png"
-dest_files=["res://.godot/imported/knightkneel.png-a1e22b980bd87222e69af8f9f2e36d83.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_left_suck.png"
+dest_files=["res://.godot/imported/knight_left_suck.png-d1154e8df3ef5f3e46222d279716b47b.ctex"]
 
 [params]
 

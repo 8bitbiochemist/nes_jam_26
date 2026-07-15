@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7tpwgcshyini"
-path="res://.godot/imported/knightsidesuck.png-cf8f799b4927ec34a06fc25e9b326f3c.ctex"
+uid="uid://74ts78r7xfe"
+path="res://.godot/imported/knight_right_punch.png-d6947509ee82641492bbce4bd93c8e8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knightsidesuck.png"
-dest_files=["res://.godot/imported/knightsidesuck.png-cf8f799b4927ec34a06fc25e9b326f3c.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_right_punch.png"
+dest_files=["res://.godot/imported/knight_right_punch.png-d6947509ee82641492bbce4bd93c8e8b.ctex"]
 
 [params]
 

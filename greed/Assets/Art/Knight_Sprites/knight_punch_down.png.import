@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5skfua21y0i8"
-path="res://.godot/imported/knightsidepunch.png-4387ecde18b3814507b31481a059e0e4.ctex"
+uid="uid://b1hwuyr6said7"
+path="res://.godot/imported/knight_punch_down.png-14f23612745ba24e9c9a5df556269996.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knightsidepunch.png"
-dest_files=["res://.godot/imported/knightsidepunch.png-4387ecde18b3814507b31481a059e0e4.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_punch_down.png"
+dest_files=["res://.godot/imported/knight_punch_down.png-14f23612745ba24e9c9a5df556269996.ctex"]
 
 [params]
 

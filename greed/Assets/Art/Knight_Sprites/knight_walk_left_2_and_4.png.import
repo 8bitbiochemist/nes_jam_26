@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhrnigp6xxf47"
-path="res://.godot/imported/knightwalkside3.png-67b343bf548a55f7166ca072cf72ba31.ctex"
+uid="uid://buqgxt73qkvxx"
+path="res://.godot/imported/knight_walk_left_2_and_4.png-1cb48436cb07a87ed99973a05443ae06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knightwalkside3.png"
-dest_files=["res://.godot/imported/knightwalkside3.png-67b343bf548a55f7166ca072cf72ba31.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_walk_left_2_and_4.png"
+dest_files=["res://.godot/imported/knight_walk_left_2_and_4.png-1cb48436cb07a87ed99973a05443ae06.ctex"]
 
 [params]
 

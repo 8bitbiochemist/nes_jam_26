@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddh7x4yq6mgj8"
-path="res://.godot/imported/knightpunchup.png-58363d15c3b8e774d17a6417b9ab7ac5.ctex"
+uid="uid://dpoqnxrx00mdb"
+path="res://.godot/imported/knight_kneel.png-d112cc147907d5862e1e1c3d9a451941.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/knightpunchup.png"
-dest_files=["res://.godot/imported/knightpunchup.png-58363d15c3b8e774d17a6417b9ab7ac5.ctex"]
+source_file="res://Assets/Art/Knight_Sprites/knight_kneel.png"
+dest_files=["res://.godot/imported/knight_kneel.png-d112cc147907d5862e1e1c3d9a451941.ctex"]
 
 [params]
 
